@@ -228,5 +228,5 @@ class Campaign(models.Model):
 
 
 class Reciever(models.Model):
-    campaign = models.ForeignKey(Campaign, related_name='receivers')
+    campaign = models.ForeignKey(Campaign, related_name='receivers', on_delete=models.CASCADE)
     email = models.EmailField(max_length=254)
