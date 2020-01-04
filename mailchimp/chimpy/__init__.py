@@ -1,1 +1,1 @@
-from chimpy.py import Connection
+from mailchimp.chimpy.chimpy import Connection
