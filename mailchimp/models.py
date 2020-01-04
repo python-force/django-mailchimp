@@ -173,7 +173,7 @@ class Campaign(models.Model):
     campaign_id = models.CharField(max_length=50)
     content = models.TextField()
     name = models.CharField(max_length=255)
-    content_type = models.ForeignKey(ContentType, null=True, blank=True)
+    content_type = models.ForeignKey(ContentType, null=True, blank=True, on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField(null=True, blank=True)
     content_object = GenericForeignKey('content_type', 'object_id')
     extra_info = models.TextField(null=True)
