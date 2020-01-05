@@ -237,6 +237,9 @@ class BaseView(object):
         sandbox.kwargs = kwargs
         sandbox.request = request
         return getattr(sandbox, handle_func_name)()
+    
+    def __qualname__(self, request, *args, **kwargs):
+        return None
 
     #===========================================================================
     # Misc Helpers
