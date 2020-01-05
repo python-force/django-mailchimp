@@ -21,9 +21,6 @@ class MailchimpBaseView(BaseView):
 class MailchimpView(MailchimpBaseView):
     required_permissions = ['mailchimp.can_view']
     
-    def __qualname__(self):
-        return ""
-
 
 class Overview(MailchimpView):
     template = 'mailchimp/overview.html'
